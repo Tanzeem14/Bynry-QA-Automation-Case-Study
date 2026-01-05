@@ -1,38 +1,60 @@
-# Bynry-QA-Automation-Case-Study
+# Bynry QA Automation Case Study
+
+This repository contains my solution for the **QA Automation Engineering Intern – Case Study** at **Bynry Inc**.
+
+The case study evaluates test automation skills for a **multi-tenant B2B SaaS platform**, focusing on test reliability, framework design, API + UI integration, and CI/CD readiness.
+
+---
+
+## 🛠️ Technologies Used
+
+- **Python**
+- **pytest** – test runner
+- **Playwright** – web UI automation
+- **requests** – API testing
+- **BrowserStack** – cross-browser and mobile testing (conceptual)
+- **GitHub** – version control
+
+---
+
 ## Part 1: Debugging Flaky Test Code
 
 **Objective:**  
-Analyze and fix flaky Playwright UI tests that fail intermittently in CI/CD environments for a multi-tenant B2B SaaS application.
+Analyze and fix flaky Playwright UI tests that fail intermittently in CI/CD environments.
 
 **Summary of Improvements:**
-- Added explicit waits for navigation and dynamically loaded UI elements
-- Improved test stability for CI pipelines using headless browser execution
-- Ensured test isolation using fresh browser contexts
+- Added explicit waits for navigation and dynamic UI elements
+- Improved CI stability using headless execution
+- Ensured test isolation using browser contexts
 - Handled tenant-specific loading delays
-- Considered optional 2FA login scenarios
+- Considered optional 2FA scenarios
 
-📄 **Detailed analysis and reasoning:**  
+📄 Detailed analysis:  
 `docs/part1_flaky_test_analysis.md`
 
-🧪 **Test implementation:**  
+🧪 Test implementation:  
 `tests/ui/test_login_part1.py`
+
+---
 
 ## Part 2: Test Framework Design
 
-Designed a scalable automation framework for a multi-tenant B2B SaaS platform.
+Designed a scalable and maintainable test automation framework for a multi-tenant B2B SaaS platform.
 
 **Highlights:**
 - Supports Web, Mobile, and API testing
 - Handles multiple tenants and user roles
 - Integrates with BrowserStack
-- CI/CD-ready design
+- CI/CD-ready and scalable design
 
-📄 Detailed design:
+📄 Detailed framework design:  
 `docs/part2_framework_design.md`
+
+---
 
 ## Part 3: API + UI Integration Test
 
-Implemented an end-to-end integration test to validate project creation across API, Web UI, and tenant boundaries.
+Designed an end-to-end integration test validating project creation across backend API and frontend UI layers.
 
 **Coverage:**
 - Project creation via backend API
@@ -40,8 +62,17 @@ Implemented an end-to-end integration test to validate project creation across A
 - Tenant isolation verification
 - Cross-platform testing considerations
 
-📄 Detailed approach:
+📄 Detailed approach:  
 `docs/part3_api_ui_integration.md`
 
-🧪 Test implementation:
+🧪 Test implementation:  
 `tests/api/test_project_creation_flow.py`
+
+---
+
+## 📌 Notes & Assumptions
+
+- The platform and APIs are assumed for case study purposes
+- Valid authentication tokens and test users are assumed
+- Mobile execution via BrowserStack is conceptual
+- The focus is on **test design, structure, and strategy**, not execution against a live system
