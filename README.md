@@ -29,3 +29,19 @@ Designed a scalable automation framework for a multi-tenant B2B SaaS platform.
 
 📄 Detailed design:
 `docs/part2_framework_design.md`
+
+## Part 3: API + UI Integration Test
+
+Implemented an end-to-end integration test to validate project creation across API, Web UI, and tenant boundaries.
+
+**Coverage:**
+- Project creation via backend API
+- Web UI validation using Playwright
+- Tenant isolation verification
+- Cross-platform testing considerations
+
+📄 Detailed approach:
+`docs/part3_api_ui_integration.md`
+
+🧪 Test implementation:
+`tests/api/test_project_creation_flow.py`
