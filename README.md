@@ -1,4 +1,4 @@
-# bynry-qa-automation-case-study
+# Bynry-QA-Automation-Case-Study
 ## Part 1: Debugging Flaky Test Code
 
 **Objective:**  
