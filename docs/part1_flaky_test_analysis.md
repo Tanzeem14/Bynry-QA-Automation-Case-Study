@@ -68,3 +68,17 @@ These changes ensure that assertions are performed only after the application re
 Flaky tests are primarily caused by missing synchronization between test execution and application state.
 
 By using explicit waits, proper browser isolation, and CI-aware design practices, test reliability can be significantly improved, resulting in more stable and maintainable automation suites.
+
+
+## Part 2: Test Framework Design
+
+Designed a scalable automation framework for a multi-tenant B2B SaaS platform.
+
+**Highlights:**
+- Supports Web, Mobile, and API testing
+- Handles multiple tenants and user roles
+- Integrates with BrowserStack
+- CI/CD-ready design
+
+📄 Detailed design:
+`docs/part2_framework_design.md`
