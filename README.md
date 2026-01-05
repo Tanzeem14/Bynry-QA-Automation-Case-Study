@@ -1,0 +1,1 @@
+# bynry-qa-automation-case-study
