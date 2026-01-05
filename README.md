@@ -16,3 +16,16 @@ Analyze and fix flaky Playwright UI tests that fail intermittently in CI/CD envi
 
 🧪 **Test implementation:**  
 `tests/ui/test_login_part1.py`
+
+## Part 2: Test Framework Design
+
+Designed a scalable automation framework for a multi-tenant B2B SaaS platform.
+
+**Highlights:**
+- Supports Web, Mobile, and API testing
+- Handles multiple tenants and user roles
+- Integrates with BrowserStack
+- CI/CD-ready design
+
+📄 Detailed design:
+`docs/part2_framework_design.md`
