@@ -1,78 +1,56 @@
-# Bynry QA Automation Case Study
+# QA Automation Case Study – Bynry Internship
 
+## Overview
 This repository contains my solution for the **QA Automation Engineering Intern – Case Study** at **Bynry Inc**.
 
-The case study evaluates test automation skills for a **multi-tenant B2B SaaS platform**, focusing on test reliability, framework design, API + UI integration, and CI/CD readiness.
+The case study focuses on:
+- Fixing flaky UI tests
+- Designing a scalable test automation framework
+- Implementing an API + UI integration test for a multi-tenant B2B SaaS platform
 
 ---
 
-## 🛠️ Technologies Used
-
-- **Python**
-- **pytest** – test runner
-- **Playwright** – web UI automation
-- **requests** – API testing
-- **BrowserStack** – cross-browser and mobile testing (conceptual)
-- **GitHub** – version control
+## Tech Stack
+- Python 3.9+
+- pytest (test runner)
+- Playwright (web UI automation)
+- requests (API testing)
+- BrowserStack (cross-browser & mobile testing – conceptual)
 
 ---
 
-## Part 1: Debugging Flaky Test Code
+## How to Run
 
-**Objective:**  
-Analyze and fix flaky Playwright UI tests that fail intermittently in CI/CD environments.
+### Setup
+```bash
+pip install -r requirements.txt
+playwright install
+```
 
-**Summary of Improvements:**
-- Added explicit waits for navigation and dynamic UI elements
-- Improved CI stability using headless execution
-- Ensured test isolation using browser contexts
-- Handled tenant-specific loading delays
-- Considered optional 2FA scenarios
+### Part 1: Flaky Test Fix
+```bash
+pytest tests/ui/test_login_part1.py -v
+```
+### Part 2 (Framework Design) is documented in `docs/part2_framework_design.md`.
 
-📄 Detailed analysis:  
-`docs/part1_flaky_test_analysis.md`
+### Part 3: API + UI Integration Test (Conceptual)
+```bash
+pytest tests/api/test_project_creation_flow.py -v
+```
 
-🧪 Test implementation:  
-`tests/ui/test_login_part1.py`
+### Structure
+tests/
+ ├── ui/                 → Flaky login test fix
+ ├── api/                → API + UI integration test
+docs/
+ ├── part1_flaky_test_analysis.md
+ ├── part2_framework_design.md
+ └── part3_api_ui_integration.md
 
----
+### Notes
 
-## Part 2: Test Framework Design
+APIs, tenants, and authentication are assumed for case study purposes
 
-Designed a scalable and maintainable test automation framework for a multi-tenant B2B SaaS platform.
+BrowserStack execution is conceptual and intended for CI/CD pipelines
 
-**Highlights:**
-- Supports Web, Mobile, and API testing
-- Handles multiple tenants and user roles
-- Integrates with BrowserStack
-- CI/CD-ready and scalable design
-
-📄 Detailed framework design:  
-`docs/part2_framework_design.md`
-
----
-
-## Part 3: API + UI Integration Test
-
-Designed an end-to-end integration test validating project creation across backend API and frontend UI layers.
-
-**Coverage:**
-- Project creation via backend API
-- Web UI validation using Playwright
-- Tenant isolation verification
-- Cross-platform testing considerations
-
-📄 Detailed approach:  
-`docs/part3_api_ui_integration.md`
-
-🧪 Test implementation:  
-`tests/api/test_project_creation_flow.py`
-
----
-
-## 📌 Notes & Assumptions
-
-- The platform and APIs are assumed for case study purposes
-- Valid authentication tokens and test users are assumed
-- Mobile execution via BrowserStack is conceptual
-- The focus is on **test design, structure, and strategy**, not execution against a live system
+Focus is on test design, structure, and automation strategy
