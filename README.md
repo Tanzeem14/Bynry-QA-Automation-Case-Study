@@ -39,6 +39,7 @@ pytest tests/api/test_project_creation_flow.py -v
 ```
 
 ### Structure
+```text 
 tests/
  ├── ui/                 → Flaky login test fix
  ├── api/                → API + UI integration test
@@ -46,7 +47,7 @@ docs/
  ├── part1_flaky_test_analysis.md
  ├── part2_framework_design.md
  └── part3_api_ui_integration.md
-
+```
 ### Notes
 
 APIs, tenants, and authentication are assumed for case study purposes
